@@ -6,28 +6,28 @@ require_once __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/include.php';
 
 $options = parse_cli_options();
-$dynamodb = connect_to_dynamo_db($options['host'], $options['port']);
+$dynamodb = connect_to_dynamo_db($options);
 
 $params = [
-    'TableName' => 'Movies',
+    'TableName' => 'dev__fw__team_races_team_race',
     'KeySchema' => [
         [
-            'AttributeName' => 'year',
+            'AttributeName' => 'race_id',
             'KeyType' => 'HASH'  //Partition key
         ],
         [
-            'AttributeName' => 'title',
+            'AttributeName' => 'config_id',
             'KeyType' => 'RANGE'  //Sort key
         ]
     ],
     'AttributeDefinitions' => [
         [
-            'AttributeName' => 'year',
-            'AttributeType' => 'N'
+            'AttributeName' => 'race_id',
+            'AttributeType' => 'S'
         ],
         [
-            'AttributeName' => 'title',
-            'AttributeType' => 'S'
+            'AttributeName' => 'config_id',
+            'AttributeType' => 'N'
         ],
 
     ],

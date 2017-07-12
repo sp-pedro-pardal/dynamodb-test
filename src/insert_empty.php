@@ -15,7 +15,8 @@ $configId = 123;
 
 $item = [
     'race_id' => ['S' => $raceId],
-    'config_id' => ['N' => $configId],
+    'config_id' => ['N' => "$configId"],
+    'info' => ['S' => ''],
 ];
 
 $params = [
