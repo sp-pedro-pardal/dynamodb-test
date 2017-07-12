@@ -1,0 +1,13 @@
+{
+    "name": "socialpoint/dynamodb-test",
+    "type": "project",
+    "require": {
+        "aws/aws-sdk-php": "~3.31"
+    },
+    "authors": [
+        {
+            "name": "Pedro Pardal",
+            "email": "pedro.pardal@socialpoint.es"
+        }
+    ]
+}
